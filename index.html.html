@@ -1,0 +1,1270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hinmona Events & Promotion | Business Consulting & Marketing</title>
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #1e293b;
+            background-color: #f8fafc;
+        }
+
+        /* Bright Lemon Color */
+        :root {
+            --brand-lemon: #F0E68C;
+            --brand-lemon-dark: #e6d97a;
+            --brand-lemon-light: #f9f3c1;
+            --text-dark: #1e293b;
+            --text-light: #f8fafc;
+            --gray-bg: #f1f5f9;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header & Navigation */
+        .top-bar {
+            background-color: #1e293b;
+            color: white;
+            padding: 8px 0;
+            font-size: 0.9rem;
+        }
+
+        .top-bar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .top-bar a {
+            color: white;
+            text-decoration: none;
+            margin-right: 20px;
+        }
+
+        .top-bar a i {
+            margin-right: 5px;
+            color: var(--brand-lemon);
+        }
+
+        .top-bar .social-links a {
+            margin-left: 15px;
+            margin-right: 0;
+            font-size: 1.1rem;
+        }
+
+        .main-header {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .main-header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 24px;
+        }
+
+        .logo h1 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            line-height: 1.2;
+            color: #1e293b;
+        }
+
+        .logo span {
+            font-size: 0.9rem;
+            font-weight: 400;
+            letter-spacing: 1px;
+            color: #64748b;
+            display: block;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: #1e293b;
+            font-weight: 500;
+            transition: color 0.3s;
+            font-size: 1rem;
+        }
+
+        .nav-menu a:hover {
+            color: var(--brand-lemon-dark);
+        }
+
+        /* Mobile menu */
+        .menu-toggle {
+            display: none;
+            font-size: 1.8rem;
+            cursor: pointer;
+            color: #1e293b;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background-color: var(--brand-lemon);
+            color: #1e293b;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--brand-lemon-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(240, 230, 140, 0.4);
+        }
+
+        .btn-outline {
+            border: 2px solid var(--brand-lemon);
+            color: #1e293b;
+            background: transparent;
+        }
+
+        .btn-outline:hover {
+            background-color: var(--brand-lemon);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #f8fafc 0%, #fff 100%);
+            padding: 60px 0;
+            border-bottom: 3px solid var(--brand-lemon);
+        }
+
+        .hero .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .hero-content h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            color: #0f172a;
+        }
+
+        .hero-content h2 span {
+            color: var(--brand-lemon-dark);
+            border-bottom: 3px solid var(--brand-lemon);
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        .hero-content p {
+            font-size: 1.1rem;
+            color: #334155;
+            margin-bottom: 30px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .hero-image {
+            background-color: var(--brand-lemon-light);
+            border-radius: 10px;
+            padding: 40px;
+            text-align: center;
+            min-height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px dashed var(--brand-lemon);
+        }
+
+        .hero-image i {
+            font-size: 8rem;
+            color: var(--brand-lemon-dark);
+            opacity: 0.7;
+        }
+
+        /* Audience Slider Section */
+        .audience-section {
+            padding: 70px 0;
+            background: white;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h3 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #0f172a;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 15px;
+        }
+
+        .section-title h3:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: var(--brand-lemon);
+        }
+
+        .audience-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .audience-card {
+            background: var(--gray-bg);
+            padding: 25px 15px;
+            border-radius: 10px;
+            text-align: center;
+            transition: all 0.3s;
+            border-bottom: 4px solid transparent;
+        }
+
+        .audience-card:hover {
+            transform: translateY(-5px);
+            border-bottom-color: var(--brand-lemon);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .audience-card i {
+            font-size: 2.5rem;
+            color: var(--brand-lemon-dark);
+            margin-bottom: 15px;
+        }
+
+        .audience-card h4 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .audience-card p {
+            font-size: 0.9rem;
+            color: #475569;
+        }
+
+        /* Services Section */
+        .services-section {
+            padding: 70px 0;
+            background-color: var(--gray-bg);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            transition: 0.3s;
+            border: 1px solid #e2e8f0;
+        }
+
+        .service-card:hover {
+            box-shadow: 0 15px 30px rgba(240, 230, 140, 0.2);
+            border-color: var(--brand-lemon);
+        }
+
+        .service-icon {
+            background-color: var(--brand-lemon-light);
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .service-icon i {
+            font-size: 2rem;
+            color: #1e293b;
+        }
+
+        .service-card h4 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+        }
+
+        .service-card p {
+            color: #475569;
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+        }
+
+        .service-features {
+            list-style: none;
+            margin-top: 15px;
+        }
+
+        .service-features li {
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+        }
+
+        .service-features i {
+            color: var(--brand-lemon-dark);
+            margin-right: 8px;
+            font-weight: bold;
+        }
+
+        /* About Section */
+        .about-section {
+            padding: 70px 0;
+            background: white;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-content h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .about-content p {
+            color: #334155;
+            margin-bottom: 20px;
+        }
+
+        .stats {
+            display: flex;
+            gap: 40px;
+            margin-top: 30px;
+        }
+
+        .stat-item h4 {
+            font-size: 2rem;
+            color: var(--brand-lemon-dark);
+        }
+
+        .about-image {
+            background: var(--brand-lemon-light);
+            border-radius: 10px;
+            padding: 40px;
+            text-align: center;
+            min-height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px dashed var(--brand-lemon);
+        }
+
+        .about-image i {
+            font-size: 8rem;
+            color: var(--brand-lemon-dark);
+            opacity: 0.6;
+        }
+
+        /* Team Section */
+        .team-section {
+            padding: 70px 0;
+            background-color: var(--gray-bg);
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .team-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: 0.3s;
+        }
+
+        .team-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+
+        .team-image {
+            height: 250px;
+            overflow: hidden;
+        }
+
+        .team-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .team-card:hover .team-image img {
+            transform: scale(1.05);
+        }
+
+        .team-info {
+            padding: 20px;
+        }
+
+        .team-info h4 {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+
+        .team-info p {
+            color: #64748b;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+
+        .team-social a {
+            color: #1e293b;
+            margin: 0 8px;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+
+        .team-social a:hover {
+            color: var(--brand-lemon-dark);
+        }
+
+        /* Gallery Section */
+        .gallery-section {
+            padding: 70px 0;
+            background: white;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery-item {
+            height: 250px;
+            border-radius: 8px;
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0,0,0,0.7);
+            color: white;
+            padding: 15px;
+            text-align: center;
+            transform: translateY(100%);
+            transition: transform 0.3s;
+            font-weight: 500;
+        }
+
+        .gallery-item:hover .gallery-caption {
+            transform: translateY(0);
+        }
+
+        /* Google Calendar Booking Section */
+        .booking-section {
+            padding: 70px 0;
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            color: white;
+        }
+
+        .booking-section .section-title h3 {
+            color: white;
+        }
+        .booking-section .section-title h3:after {
+            background-color: var(--brand-lemon);
+        }
+
+        .booking-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .booking-info h4 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--brand-lemon);
+        }
+
+        .booking-info p {
+            margin-bottom: 25px;
+            color: #cbd5e1;
+        }
+
+        .calendar-placeholder {
+            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
+            padding: 30px;
+            text-align: center;
+            border: 2px dashed var(--brand-lemon);
+        }
+
+        .calendar-placeholder i {
+            font-size: 4rem;
+            color: var(--brand-lemon);
+            margin-bottom: 15px;
+        }
+
+        .calendar-placeholder h4 {
+            color: white;
+            margin: 10px 0;
+        }
+
+        .calendar-placeholder p {
+            color: #cbd5e1;
+            font-size: 1.1rem;
+        }
+
+        .calendar-placeholder a {
+            color: var(--brand-lemon);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            padding: 70px 0;
+            background: white;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .contact-info h4 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        .contact-details {
+            margin: 30px 0;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .contact-item i {
+            width: 40px;
+            height: 40px;
+            background: var(--brand-lemon-light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #1e293b;
+            font-size: 1.2rem;
+        }
+
+        .contact-form input,
+        .contact-form textarea,
+        .contact-form select {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #cbd5e1;
+            border-radius: 5px;
+            font-family: inherit;
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus,
+        .contact-form select:focus {
+            outline: 2px solid var(--brand-lemon);
+            border-color: transparent;
+        }
+
+        /* Footer */
+        footer {
+            background: #0f172a;
+            color: #cbd5e1;
+            padding: 50px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col a {
+            color: #cbd5e1;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-col a:hover {
+            color: var(--brand-lemon);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #334155;
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .hero .container,
+            .about-grid,
+            .booking-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-image {
+                order: -1;
+            }
+
+            .nav-menu {
+                display: none;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .nav-menu.active {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: white;
+                padding: 20px;
+                box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .top-bar .container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .top-bar .contact-info a {
+                display: block;
+                margin: 5px 0;
+            }
+
+            .hero-content h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Bar with contact info -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="contact-info">
+                <a href="mailto:nimonabusinessgroup@gmail.com"><i class="fas fa-envelope"></i> nimonabusinessgroup@gmail.com</a>
+                <a href="tel:+251910494228"><i class="fas fa-phone-alt"></i> +251 910 494228 (WhatsApp)</a>
+                <a href="https://maps.google.com/?q=Addis+Ababa+Ethiopia" target="_blank"><i class="fas fa-map-marker-alt"></i> Addis Ababa, Ethiopia</a>
+            </div>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/251910494228" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header with Navigation -->
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <h1>HINMONA</h1>
+                <span>EVENTS & PROMOTION</span>
+            </div>
+            <nav>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#team">Team</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#booking" class="btn btn-primary" style="padding: 8px 20px;">Book Now</a></li>
+                </ul>
+            </nav>
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Shaping <span>Business Success</span> with Innovation & Strategy</h2>
+                <p>Hinmona Events & Promotion delivers integrated business consulting, marketing research, promotional campaigns, and professional event organization tailored for investors, banks, schools, law firms, and technology companies.</p>
+                <div class="hero-buttons">
+                    <a href="#services" class="btn btn-primary">Explore Services</a>
+                    <a href="#booking" class="btn btn-outline">Book Consultation</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <i class="fas fa-chart-line"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Target Audience Section -->
+    <section class="audience-section">
+        <div class="container">
+            <div class="section-title">
+                <h3>Who We Serve</h3>
+                <p>Tailored solutions for diverse sectors across East Africa</p>
+            </div>
+            <div class="audience-grid">
+                <div class="audience-card">
+                    <i class="fas fa-user-tie"></i>
+                    <h4>Investors</h4>
+                    <p>Business consulting: legal, tax, financial advisory</p>
+                </div>
+                <div class="audience-card">
+                    <i class="fas fa-university"></i>
+                    <h4>Banks</h4>
+                    <p>Promotion, advertising, market research, customer satisfaction</p>
+                </div>
+                <div class="audience-card">
+                    <i class="fas fa-school"></i>
+                    <h4>Schools</h4>
+                    <p>Promotional campaigns & mindset training events</p>
+                </div>
+                <div class="audience-card">
+                    <i class="fas fa-users"></i>
+                    <h4>Students</h4>
+                    <p>Mindset training & personal development events</p>
+                </div>
+                <div class="audience-card">
+                    <i class="fas fa-gavel"></i>
+                    <h4>Law Firms</h4>
+                    <p>Market growth, business linkages, case execution</p>
+                </div>
+                <div class="audience-card">
+                    <i class="fas fa-hard-hat"></i>
+                    <h4>Construction</h4>
+                    <p>Promotion & strategic business partnerships</p>
+                </div>
+                <div class="audience-card">
+                    <i class="fas fa-microchip"></i>
+                    <h4>Tech Companies</h4>
+                    <p>Product promotion & business linkages</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section" id="services">
+        <div class="container">
+            <div class="section-title">
+                <h3>Our Comprehensive Services</h3>
+                <p>Integrated solutions for your business growth</p>
+            </div>
+            <div class="services-grid">
+                <!-- Business Consulting -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h4>Business & Investment Consulting</h4>
+                    <p>Strategic advisory for investors and corporations covering legal, tax, financial planning, and market entry.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Tax & General Business Law Advice</li>
+                        <li><i class="fas fa-check"></i> Investment Due Diligence</li>
+                        <li><i class="fas fa-check"></i> Financial Planning</li>
+                        <li><i class="fas fa-check"></i> Case Execution in Government Offices</li>
+                    </ul>
+                </div>
+
+                <!-- Promotion & Advertising -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-bullhorn"></i>
+                    </div>
+                    <h4>Promotion & Advertising</h4>
+                    <p>Amplify your brand with targeted campaigns across digital and traditional media.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Social Media Marketing</li>
+                        <li><i class="fas fa-check"></i> Brand Promotion</li>
+                        <li><i class="fas fa-check"></i> Promotional Video Production & Editing</li>
+                        <li><i class="fas fa-check"></i> Advertising Campaign Management</li>
+                    </ul>
+                </div>
+
+                <!-- Events Organizing -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <h4>Events Organizing</h4>
+                    <p>Professional planning and execution of corporate trainings, promotional events, and seminars.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Training Events & Workshops</li>
+                        <li><i class="fas fa-check"></i> Product Launch Events</li>
+                        <li><i class="fas fa-check"></i> Corporate Seminars</li>
+                        <li><i class="fas fa-check"></i> Promotional Activations</li>
+                    </ul>
+                </div>
+
+                <!-- Business Development -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h4>Business Development & Marketing Support</h4>
+                    <p>End-to-end support to scale your business and enter new markets.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Marketing Research & Analysis</li>
+                        <li><i class="fas fa-check"></i> Customer Satisfaction Assessments</li>
+                        <li><i class="fas fa-check"></i> Service & Product Design</li>
+                        <li><i class="fas fa-check"></i> Business Linkages & Partnerships</li>
+                    </ul>
+                </div>
+
+                <!-- Video Production -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h4>Promotional & Training Videos</h4>
+                    <p>High-quality video content for marketing, training, and brand storytelling.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Corporate Videos</li>
+                        <li><i class="fas fa-check"></i> Training Modules</li>
+                        <li><i class="fas fa-check"></i> Product Demos</li>
+                        <li><i class="fas fa-check"></i> Editing & Post-Production</li>
+                    </ul>
+                </div>
+
+                <!-- Legal & Tax Advice -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-scale-balanced"></i>
+                    </div>
+                    <h4>Legal & Tax Advisory</h4>
+                    <p>Expert guidance on business law, tax compliance, and regulatory affairs.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> General Business Law Advice</li>
+                        <li><i class="fas fa-check"></i> Tax Planning & Compliance</li>
+                        <li><i class="fas fa-check"></i> Contract Review</li>
+                        <li><i class="fas fa-check"></i> Regulatory Filings</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content">
+                    <h3>About Hinmona Events & Promotion</h3>
+                    <p>Hinmona is a dynamic consulting and promotion firm dedicated to empowering businesses, investors, and institutions with integrated solutions. We combine strategic business consulting with creative promotional campaigns to drive measurable growth across East Africa.</p>
+                    <p>Our multidisciplinary team brings expertise in law, marketing, finance, and event management to deliver tailored services for banks, schools, law firms, tech companies, and construction firms. We don't just advise — we execute, ensuring your vision becomes reality.</p>
+                    <div class="stats">
+                        <div class="stat-item">
+                            <h4>50+</h4>
+                            <p>Clients Served</p>
+                        </div>
+                        <div class="stat-item">
+                            <h4>100+</h4>
+                            <p>Events Organized</p>
+                        </div>
+                        <div class="stat-item">
+                            <h4>10+</h4>
+                            <p>Expert Team</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <i class="fas fa-building"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <!-- Team Section -->
+<section class="team-section" id="team">
+    <div class="container">
+        <div class="section-title">
+            <h3>Our Leadership Team</h3>
+            <p>Experienced professionals driving your success</p>
+        </div>
+        <div class="team-grid">
+            <!-- Abdirebi Daniel - CEO -->
+            <div class="team-card">
+                <div class="team-image">
+                    <img src="https://ui-avatars.com/api/?name=Abdirebi+Daniel&size=400&length=2&background=F0E68C&color=000000&bold=true" alt="Abdirebi Daniel">
+                </div>
+                <div class="team-info">
+                    <h4>Abdirebi Daniel</h4>
+                    <p>CEO & Founder</p>
+                    <div style="text-align:left; padding:0 10px; margin:10px 0; font-size:0.9rem; color:#475569;">
+                        <p><i class="fas fa-check-circle" style="color: var(--brand-lemon);"></i> 10+ years in international organizations</p>
+                        <p><i class="fas fa-check-circle" style="color: var(--brand-lemon);"></i> Administration, Finance, Marketing & Business Development</p>
+                        <p><i class="fas fa-check-circle" style="color: var(--brand-lemon);"></i> Events Organizing & Tour Guiding expert</p>
+                        <p><i class="fas fa-check-circle" style="color: var(--brand-lemon);"></i> Led logistics at GERDP, service design at Webuild Group</p>
+                    </div>
+                    <div class="team-social">
+                        <a href="https://www.linkedin.com/in/abdirebi-d-9b946299/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Jittu Milkeso - Deputy CEO -->
+            <div class="team-card">
+                <div class="team-image">
+                    <img src="https://ui-avatars.com/api/?name=Jittu+Milkeso&size=400&length=2&background=F0E68C&color=000000&bold=true" alt="Jittu Milkeso">
+                </div>
+                <div class="team-info">
+                    <h4>Jittu Milkeso</h4>
+                    <p>Deputy CEO / Marketing Department Head</p>
+                    <div style="text-align:left; padding:0 10px; margin:10px 0; font-size:0.9rem; color:#475569;">
+                        <p><i class="fas fa-check-circle" style="color: var(--brand-lemon);"></i> International marketing experience in Kenya & Nairobi</p>
+                        <p><i class="fas fa-check-circle" style="color: var(--brand-lemon);"></i> Marketing strategy & business development expert</p>
+                        <p><i class="fas fa-check-circle" style="color: var(--brand-lemon);"></i> Successfully ran marketing operations in Nairobi</p>
+                        <p><i class="fas fa-check-circle" style="color: var(--brand-lemon);"></i> Cross-border business development specialist</p>
+                    </div>
+                    <div class="team-social">
+                        <a href="https://www.linkedin.com/in/jitu-milkeso-0694353a0/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Abel Taye - Digitalization Head -->
+            <div class="team-card">
+                <div class="team-image">
+                    <img src="https://ui-avatars.com/api/?name=Abel+Taye&size=400&length=2&background=F0E68C&color=000000&bold=true" alt="Abel Taye">
+                </div>
+                <div class="team-info">
+                    <h4>Abel Taye</h4>
+                    <p>Digitalization & IT Department Head</p>
+                    <div style="text-align:left; padding:0 10px; margin:10px 0; font-size:0.9rem; color:#475569;">
+                        <p><i class="fas fa-check-circle" style="color: var(--brand-lemon);"></i> IT Technician & Software Engineer</p>
+                        <p><i class="fas fa-check-circle" style="color: var(--brand-lemon);"></i> Digital transformation specialist</p>
+                        <p><i class="fas fa-check-circle" style="color: var(--brand-lemon);"></i> Networking expert</p>
+                        <p><i class="fas fa-check-circle" style="color: var(--brand-lemon);"></i> Software development & IT infrastructure</p>
+                    </div>
+                    <div class="team-social">
+                        <a href="https://www.linkedin.com/in/abel-taye-00bb8496/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Gallery Section with AI-generated images -->
+    <section class="gallery-section" id="gallery">
+        <div class="container">
+            <div class="section-title">
+                <h3>Our Work Gallery</h3>
+                <p>Moments from our events and campaigns</p>
+            </div>
+            <div class="gallery-grid">
+                <!-- Corporate Training -->
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Corporate Training">
+                    <div class="gallery-caption">Business Leadership Workshop 2024</div>
+                </div>
+                
+                <!-- Bank Promotion -->
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1567427017947-545c5f8d16ad?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Bank Promotion">
+                    <div class="gallery-caption">Banking Sector Promotion Campaign</div>
+                </div>
+                
+                <!-- School Event -->
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="School Event">
+                    <div class="gallery-caption">Student Mindset Training Program</div>
+                </div>
+                
+                <!-- Tech Expo -->
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Tech Expo">
+                    <div class="gallery-caption">Ethiopia Tech Week 2024</div>
+                </div>
+                
+                <!-- Legal Workshop -->
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Legal Workshop">
+                    <div class="gallery-caption">Legal Symposium for Law Firms</div>
+                </div>
+                
+                <!-- Video Production -->
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1579165466741-7f35e4755660?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Video Production">
+                    <div class="gallery-caption">Promotional Video Production</div>
+                </div>
+                
+                <!-- Construction Promotion -->
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Construction Promotion">
+                    <div class="gallery-caption">Construction Industry Campaign</div>
+                </div>
+                
+                <!-- Marketing Research -->
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Marketing Research">
+                    <div class="gallery-caption">Marketing Research & Analysis</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Google Calendar Booking Section -->
+    <section class="booking-section" id="booking">
+        <div class="container">
+            <div class="section-title">
+                <h3>Book an Appointment</h3>
+                <p style="color: #cbd5e1;">Schedule your consultation directly with our team</p>
+            </div>
+            <div class="booking-grid">
+                <div class="booking-info">
+                    <h4>Ready to grow your business?</h4>
+                    <p>Select a time that works for you. We offer 30-minute initial consultations to discuss your needs in business consulting, promotion, events, or legal advisory.</p>
+                    <p><i class="fas fa-check-circle" style="color: var(--brand-lemon);"></i> Free initial consultation</p>
+                    <p><i class="fas fa-check-circle" style="color: var(--brand-lemon);"></i> Available in-person or virtual</p>
+                    <p><i class="fas fa-check-circle" style="color: var(--brand-lemon);"></i> Flexible scheduling</p>
+                </div>
+                <div class="calendar-placeholder">
+                    <i class="fab fa-google"></i>
+                    <h4>Google Calendar Booking</h4>
+                    <p>Click below to schedule:</p>
+                    <a href="#" class="btn btn-primary" style="margin-top: 15px; display: inline-block;">Check Availability</a>
+                    <p style="margin-top: 15px; font-size: 0.9rem;">(Integrate your Google Calendar appointment link here)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h3>Contact Us</h3>
+                <p>Get in touch for partnerships or inquiries</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h4>Let's talk about your goals</h4>
+                    <p>Whether you need consulting, promotion, or event organization, our team is ready to assist.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <p><strong>Head Office:</strong> Addis Ababa city, Ethiopia; East Africa</p>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone-alt"></i>
+                            <p>
+                                <strong>Main:</strong> +251 910 494228 (WhatsApp)<br>
+                                <strong>Landline:</strong> +251 114 349762<br>
+                                <strong>Mobile:</strong> +251 966 790650
+                            </p>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <p>
+                                <strong>General:</strong> nimonabusinessgroup@gmail.com<br>
+                                <strong>Daniel:</strong> danielabdirebi@gmail.com<br>
+                                <strong>Outlook:</strong> d.abdirebi@outlook.com
+                            </p>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <p><strong>Hours:</strong> Mon - Fri: 8:30 AM - 6:00 PM | Sat: 9:00 AM - 1:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form action="mailto:nimonabusinessgroup@gmail.com" method="post" enctype="text/plain">
+                        <input type="text" placeholder="Your Name" required>
+                        <input type="email" placeholder="Email Address" required>
+                        <input type="text" placeholder="Company / Organization">
+                        <select>
+                            <option>Interested in Business Consulting</option>
+                            <option>Interested in Promotion/Advertising</option>
+                            <option>Interested in Events Organization</option>
+                            <option>Interested in Legal/Tax Advice</option>
+                            <option>Other</option>
+                        </select>
+                        <textarea rows="4" placeholder="Tell us about your project"></textarea>
+                        <button type="submit" class="btn btn-primary" style="width:100%;">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>HINMONA</h4>
+                    <p style="margin:15px 0;">Integrated business consulting and promotion firm empowering investors, banks, schools, and enterprises across East Africa.</p>
+                    <div class="social-links" style="margin-top: 15px;">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/251910494228"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#team">Team</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Our Services</h4>
+                    <ul>
+                        <li><a href="#services">Business Consulting</a></li>
+                        <li><a href="#services">Promotion & Advertising</a></li>
+                        <li><a href="#services">Events Organizing</a></li>
+                        <li><a href="#services">Video Production</a></li>
+                        <li><a href="#services">Legal & Tax Advice</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt" style="margin-right: 8px;"></i> Addis Ababa, Ethiopia</li>
+                        <li><i class="fas fa-phone" style="margin-right: 8px;"></i> +251 910 494228</li>
+                        <li><i class="fas fa-envelope" style="margin-right: 8px;"></i> nimonabusinessgroup@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Hinmona Events & Promotion Company. All rights reserved. | Designed with <i class="fas fa-heart" style="color: var(--brand-lemon);"></i> for your success</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const nav = document.getElementById('navMenu');
+            nav.classList.toggle('active');
+        }
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                    // Close mobile menu if open
+                    const nav = document.getElementById('navMenu');
+                    if (nav.classList.contains('active')) {
+                        nav.classList.remove('active');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
